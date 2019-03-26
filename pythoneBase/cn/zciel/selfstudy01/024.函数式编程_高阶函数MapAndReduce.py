@@ -62,6 +62,9 @@ def str2int(s):
     return reduce(fn, map(char2num, s))
 
 
+print(str2int("12579"))
+
+
 # 还可以用lambda函数进一步简化成
 def char2num(s):
     return DIGITS[s]
@@ -69,3 +72,9 @@ def char2num(s):
 
 def str2int(s):
     return reduce(lambda x, y: x * 10 + y, map(char2num, s))
+
+
+print(char2num(123))
+
+# 小结
+# filter()的作用是从一个序列中筛出符合条件的元素。由于filter()使用了惰性计算，所以只有在取filter()结果的时候，才会真正筛选并每次返回下一个筛出的元素。
